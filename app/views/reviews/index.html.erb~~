@@ -1,0 +1,28 @@
+<h1>KENNIE BROCH REVIEW</h1>
+
+<% @reviews.each do |review| %>
+
+  <div>
+    <b>Author: </b><em><%=h review.author %></em>
+  </div>
+  <div>
+    <b>About: </b><em><%=h review.body %></em>
+  </div>
+  <div>
+    <b>Title: </b><em><%=h review.title %></em>
+  </div>
+  <div>
+    <b>Rating: </b><em><%=h review.rating %></em>
+  </div>
+
+  <ol>
+      <li><%= link_to 'Show', review %></li>
+      <li><%= link_to 'Edit', edit_review_path(review) %></li>
+      <li><%= link_to 'Destroy', review, :confirm => 'Are you sure?', :method => :delete %>
+  </ol>
+  <hr />
+<% end %>
+
+<br />
+
+<%= link_to 'New review', new_review_path %>

@@ -1,0 +1,37 @@
+<h1 style = "color: red">KENNIE BROCH REVIEW</h1>
+
+<% @reviews.each do |review| %>
+
+<div>
+  <div>
+    <strong>Author: </strong><em><%=h review.author %></em>
+  </div>
+  <div>
+    <strong>About: </strong><em><%=h review.body %></em>
+  </div>
+  <div>
+    <strong>Title: </strong><em><%=h review.title %></em>
+  </div>
+  <div>
+    <strong>Rating: </strong>
+    <% review.rating.times do %>
+      &#9733
+    <% end %>
+  </div>
+  <div>
+    <strong>Location:</strong>
+    <%= link_to review.location_name, review.location unless review.location.nil? %>  
+  </div>
+</div>
+
+  <ol>
+      <li><%= link_to 'Show', review %></li>
+      <li><%= link_to 'Edit', edit_review_path(review) %></li>
+      <li><%= link_to 'Destroy', review, :confirm => 'Are you sure?', :method => :delete %>
+  </ol>
+  <hr />
+<% end %>
+
+<br />
+
+<%= link_to 'New review', new_review_path %>

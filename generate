@@ -1,0 +1,144 @@
+Script started on Thu 15 Apr 2010 05:40:08 PM PDT
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ script/server [K[K[K[K[K[K[Kgenerate 
+Usage: script/generate generator [options] [args]
+Rails Info:
+    -v, --version                    Show the Rails version number and quit.
+    -h, --help                       Show this help message and quit.
+General Options:
+    -p, --pretend                    Run but do not make any changes.
+    -f, --force                      Overwrite files that already exist.
+    -s, --skip                       Skip files that already exist.
+    -q, --quiet                      Suppress normal output.
+    -t, --backtrace                  Debugging: show backtrace on errors.
+    -c, --svn                        Modify files with subversion. (Note: svn must be in path)
+    -g, --git                        Modify files with git. (Note: git must be in path)
+
+
+Installed Generators
+  Builtin: controller, helper, integration_test, mailer, metal, migration, model, observer, performance_test, plugin, resource, scaffold, session_migration
+
+More are available at http://wiki.rubyonrails.org/rails/pages/AvailableGenerators
+  1. Download, for example, login_generator.zip
+  2. Unzip to directory /home/oss/.rails/generators/login
+     to use the generator with all your Rails apps
+     or to /home/oss/bob/lib/generators/login
+     to use with this app only.
+  3. Run generate with no arguments for usage information
+       script/generate login
+
+Generator gems are also available:
+  1. gem search -r generator
+  2. gem install login_generator
+  3. script/generate login
+
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ script/generate scal[Kffold Rec[Kview author;[K:string body:text  [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct  title;[K:string ratig[Kng:inter[Kger
+      exists  app/models/
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/reviews
+      exists  app/views/layouts/
+      exists  test/functional/
+      exists  test/unit/
+      create  test/unit/helpers/
+      exists  public/stylesheets/
+      create  app/views/reviews/index.html.erb
+      create  app/views/reviews/show.html.erb
+      create  app/views/reviews/new.html.erb
+      create  app/views/reviews/edit.html.erb
+      create  app/views/layouts/reviews.html.erb
+      create  public/stylesheets/scaffold.css
+      create  app/controllers/reviews_controller.rb
+      create  test/functional/reviews_controller_test.rb
+      create  app/helpers/reviews_helper.rb
+      create  test/unit/helpers/reviews_helper_test.rb
+       route  map.resources :reviews
+  dependency  model
+      exists    app/models/
+      exists    test/unit/
+      exists    test/fixtures/
+      create    app/models/review.rb
+      create    test/unit/review_test.rb
+      create    test/fixtures/reviews.yml
+      create    db/migrate
+      create    db/migrate/20100416004523_create_reviews.rb
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ gedit db/migrate/20100416004523_create_reviews.rb [1P[1@:
+^[[A    ^C
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ gedit db:migrate/20100416004523_create_reviews.rb [1P[1@/
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ rea[K[Kake db:migrate
+(in /home/oss/bob)
+==  CreateReviews: migrating ==================================================
+-- create_table(:reviews)
+   -> 0.0030s
+==  CreateReviews: migrated (0.0035s) =========================================
+
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ script/console 
+Loading development environment (Rails 2.3.5)
+>> RE[Keview
+=> Review(id: integer, author: string, body: text, title: string, rating: integer, created_at: datetime, updated_at: datetime)
+>> revoew[K[K[Kiew = Review.new
+=> #<Review id: nil, author: nil, body: nil, title: nil, rating: nil, created_at: nil, updated_at: nil>
+>> review.authj[Kor = ""K"i"m" "S"a"l"i"n"a"s"
+=> "Kim Salinas"
+>> review.title = ""B"e"s"t" "R"e"v"i"e"w" "E"v"e"r"!"
+=> "Best Review Ever!"
+>> review.title = "Best Review Ever!"[C[1P[1P[1P[1P[1P[1P[1@.[1@b[1@o[1@d[1@y[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"[1P!"Y!"o!"y!"u!"[1P!"[1P!"r!"[1P!"u!" !"s!"h!"o!"u!"l!"d!" !"t!"o!"t!"a!"l!"l!"u!"[1P!"y!" !"c!"o!"m!"e!" !"h!"e!"r!"e!"
+=> "You should totally come here!"
+>> review.body = "You should totally come here!"[C[1P"[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K9[C[1P[1P[1P[1P[1@r[1@a[1@t[1@i[1@n[1@g
+=> 9
+>> review
+=> #<Review id: nil, author: "Kim Salinas", body: "You should totally come here!", title: "Best Review Ever!", rating: 9, created_at: nil, updated_at: nil>
+>> review.save
+=> true
+>> Review.all
+=> [#<Review id: 1, author: "Kim Salinas", body: "You should totally come here!", title: "Best Review Ever!", rating: 9, created_at: "2010-04-16 00:59:14", updated_at: "2010-04-16 00:59:14">]
+>> exu[Kit
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ sl[K[Kcd app/
+]0;oss@bavc-desktop3: ~/bob/apposs@bavc-desktop3:~/bob/app$ ls -l
+[00mtotal 16
+drwxr-xr-x 2 oss oss 4096 2010-04-15 17:45 [01;34mcontrollers[00m
+drwxr-xr-x 2 oss oss 4096 2010-04-15 17:45 [01;34mhelpers[00m
+drwxr-xr-x 2 oss oss 4096 2010-04-15 17:45 [01;34mmodels[00m
+drwxr-xr-x 4 oss oss 4096 2010-04-15 17:45 [01;34mviews[00m
+[m]0;oss@bavc-desktop3: ~/bob/apposs@bavc-desktop3:~/bob/app$ cd moe[Kdels/[K
+]0;oss@bavc-desktop3: ~/bob/app/modelsoss@bavc-desktop3:~/bob/app/models$ ls -l
+[00mtotal 4
+-rw-r--r-- 1 oss oss 38 2010-04-15 17:45 [00mreview.rb[00m
+[m]0;oss@bavc-desktop3: ~/bob/app/modelsoss@bavc-desktop3:~/bob/app/models$ ra[K[Kde[K[Kgedir [K[Kt Review
+^[[A^[[B        ^C
+]0;oss@bavc-desktop3: ~/bob/app/modelsoss@bavc-desktop3:~/bob/app/models$ gedit Review[1Peviewreview[C[C[C[C[C.rb
+^C
+]0;oss@bavc-desktop3: ~/bob/app/modelsoss@bavc-desktop3:~/bob/app/models$ cd ..
+]0;oss@bavc-desktop3: ~/bob/apposs@bavc-desktop3:~/bob/app$ cd controllers/
+]0;oss@bavc-desktop3: ~/bob/app/controllersoss@bavc-desktop3:~/bob/app/controllers$ ls -l
+[00mtotal 8
+-rw-r--r-- 1 oss oss  430 2010-04-15 17:22 [00mapplication_controller.rb[00m
+-rw-r--r-- 1 oss oss 1987 2010-04-15 17:45 [00mreviews_controller.rb[00m
+[m]0;oss@bavc-desktop3: ~/bob/app/controllersoss@bavc-desktop3:~/bob/app/controllers$ ls -lcd controllers/[10Pls -l[Krevi[K[K[K[Kcd reviews-[K_controller.rb
+bash: cd: reviews_controller.rb: Not a directory
+]0;oss@bavc-desktop3: ~/bob/app/controllersoss@bavc-desktop3:~/bob/app/controllers$ cd reviews_controller.rb[1P reviews_controller.rb[1P reviews_controller.rbg reviews_controller.rbe reviews_controller.rbd reviews_controller.rbi reviews_controller.rbt reviews_controller.rb
+^C
+]0;oss@bavc-desktop3: ~/bob/app/controllersoss@bavc-desktop3:~/bob/app/controllers$ cd ../,,[K[K,,[K[K../
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ rake routes
+(in /home/oss/bob)
+    reviews GET    /reviews(.:format)                 {:action=>"index", :controller=>"reviews"}
+            POST   /reviews(.:format)                 {:action=>"create", :controller=>"reviews"}
+ new_review GET    /reviews/new(.:format)             {:action=>"new", :controller=>"reviews"}
+edit_review GET    /reviews/:id/edit(.:format)        {:action=>"edit", :controller=>"reviews"}
+     review GET    /reviews/:id(.:format)             {:action=>"show", :controller=>"reviews"}
+            PUT    /reviews/:id(.:format)             {:action=>"update", :controller=>"reviews"}
+            DELETE /reviews/:id(.:format)             {:action=>"destroy", :controller=>"reviews"}
+                   /:controller/:action/:id           
+                   /:controller/:action/:id(.:format) 
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ c[Kd[Kscript/generate  migrate AddHappyCheckbox
+Couldn't find 'migrate' generator
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ script/generate  migrate AddHappyCheckbox[1P
+Couldn't find 'migrate' generator
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ script/generate migrate AddHappyCheckbox[C[1P AddHappyCheckboxi AddHappyCheckboxn AddHappyCheckbox[1P AddHappyCheckboxo AddHappyCheckboxn AddHappyCheckbox
+      exists  db/migrate
+      create  db/migrate/20100416021341_add_happy_checkbox.rb
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ gedit db/migrate/db/migrate/20100416021341_add_happy_ch eckbox.rb
+^[[A    ^C
+]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ gedit db/migrate/db/migrate/20100416021341_add_happy_cheeckbox.rb[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_chec[1Pkbox.rb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_check[1Pbox.rb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkb[1Pox.rb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbo[1Px.rb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbox[1P.rb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbox.[1Prb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbox.r[1Pb[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbox.rb[K[A]0;oss@bavc-desktop3: ~/boboss@bavc-desktop3:~/bob$ [C[C[C[C[C[C[C[C[Cdb/migrate/20100416021341_add_happy_checkbox.rb [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pdb/migrate/20100416021341_add_happy_checkbox.rb
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pb
