@@ -27,6 +27,10 @@
   <% end %>
 </p>
 
+<p>
+  <b>Map:</b>
+  <%= google_map (@review.location.address) %>
+</p>
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
